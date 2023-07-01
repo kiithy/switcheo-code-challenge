@@ -1,29 +1,38 @@
+<!DOCTYPE html>
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fancy Form</title>
-
-  <!-- You may add more stuff here -->
   <link href="style.css" rel="stylesheet" />
 </head>
-
 <body>
+  <div style="width: 100vw; height: 100vh; position: relative; background: #799C37">
+    <div class="editable-number" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+      <input id="input-number" type="number" placeholder="0" readonly style="color: #C0591D;" />
+      <div class="cursor"></div>
+    </div>
 
-  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <label for="input-address">ETH Address</label>
-    <input id="input-address" />
+    <div style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);">
+      <form onsubmit="return false" style="display: flex; flex-direction: column;">
+        <label for="input-address" class="form-label" style="color: black;">ETH Address</label>
+        <input id="input-address" style="padding: 5px;" />
+        <div id="address-error" class="error-message"></div>
+      </form>
 
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+      <form onsubmit="return false" style="display: flex; flex-direction: column; margin-top: 20px;">
+        <label for="input-otp" class="form-label" style="color: black;">OTP Authentication</label>
+        <input type="number" id="input-otp" style="padding: 5px" />
+        <div id="otp-error" class="error-message"></div>
+      </form>
+    </div>
 
-    <label for="input-otp">OTP Authentication</label>
-    <input type="number" id="input-otp" />
+    <div style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);">
+      <button onclick="validateForm()" style="width: 400px; height: 80px; background: #0082BA; border-radius: 50px; color: white; font-size: 64px; font-family: KC Bubble Shack; font-weight: 400; word-wrap: break-word; border: none; cursor: pointer;">SEND TOKENS</button>
+    </div>
 
-    <button>SEND TOKENS</button>
-  </form>
-  <script src="script.js"></script>
+    <img class="mystery-machine-flower" src="mystery-machine-flower.png" alt="Your Image">
+
+    <script src="script.js"></script>
+  </div>
 </body>
-
 </html>
