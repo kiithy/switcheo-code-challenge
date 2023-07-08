@@ -53,3 +53,4 @@ Note:
 
 1. You are recommended to use PostgreSQL because that is what we are using. However, feel free to use a language you are more familiar with.
 2. You’re not supposed to write a function/procedure, the solution should be entirely implemented in one query statement.
+
